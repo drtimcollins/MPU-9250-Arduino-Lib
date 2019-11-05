@@ -40,11 +40,11 @@ void loop()
         if ((now - lastDisplay) >= 50) {
             lastDisplay = now;
             RTVector3 a = imu->getAccel();
-			Serial.print(a.x(),8);
-			Serial.print("\t");
-			Serial.print(a.y(),8);
-			Serial.print("\t");
-			Serial.println(a.z(),8);
+            Serial.print(a.x(),8);
+            Serial.print("\t");
+            Serial.print(a.y(),8);
+            Serial.print("\t");
+            Serial.println(a.z(),8);
         }
     }
 }
