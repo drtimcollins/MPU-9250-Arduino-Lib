@@ -5,7 +5,7 @@ String[] inString;
 
 void setup(){
   size(800,600);
-  sp = new Serial(this, Serial.list()[0], 38400);
+  sp = new Serial(this, Serial.list()[0], 9600);
   sp.bufferUntil(10);  // Buffer serial input until line feed character
 }
 
@@ -21,8 +21,8 @@ void draw() {
     strokeWeight(3);
     pushMatrix();
     translate(width/2, height/2);
-    scale(100);
-    circle(a.x, a.y, a.z+2.0);
+    circle(100*a.x, 100*a.y, 100*(a.z+1.5));
+    popMatrix();
   }
 } 
  
